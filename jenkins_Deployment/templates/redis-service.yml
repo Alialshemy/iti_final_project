@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-service
+spec:
+  type: {{ .Values.dbservice.type }}
+  selector:
+    app:  {{ .Values.deploymentname.db}}
+  ports:
+    - protocol: TCP
+      port: {{.Values.dbservice.port}}
+      targetPort: {{ .Values.dbservice.targetport}}

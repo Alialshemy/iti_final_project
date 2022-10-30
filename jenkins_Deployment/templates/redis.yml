@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: {{ .Values.deploymentname.db}}
+  name: {{ .Values.deploymentname.db}}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.deploymentname.db}}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.deploymentname.db}}
+    spec:
+      containers:
+        - image: {{ .Values.dbimage.repo}}
+          name: db
+
+
+         
