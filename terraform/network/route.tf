@@ -7,7 +7,7 @@ resource "google_compute_router" "router" {
     asn = 64514
   }
 }
-/* resource "google_compute_router" "restricted_router" {
+resource "google_compute_router" "restricted_router" {
   name    = "restricted"
   region  = google_compute_subnetwork.restrict-subnet.region
   network = google_compute_network.vpc_network.id
@@ -15,4 +15,4 @@ resource "google_compute_router" "router" {
   bgp {
     asn = 64514
   }
-} */
+}
