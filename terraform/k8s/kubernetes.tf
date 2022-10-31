@@ -9,7 +9,7 @@ resource "google_container_cluster" "gke" {
   subnetwork      = var.subnetwork
 
   remove_default_node_pool = true
-  initial_node_count       = 1
+  initial_node_count       = 2
 
   release_channel {
     channel = "REGULAR"
@@ -26,13 +26,14 @@ resource "google_container_cluster" "gke" {
   }
 
   private_cluster_config {
-    enable_private_endpoint = true
+    enable_private_endpoint = false
     enable_private_nodes    = true
     master_ipv4_cidr_block  = "172.16.0.0/28"
   }
 master_authorized_networks_config {
   cidr_blocks {
-    cidr_block = "${var.authirize_ip}/32"
+   # cidr_block = "${var.authirize_ip}/32"cidr_block = 
+   cidr_block = "0.0.0.0/0"
   }
 }
 

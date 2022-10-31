@@ -3,7 +3,7 @@ resource "google_container_node_pool" "general" {
   location   = "us-central1-a"
   cluster    = google_container_cluster.gke.name
   project    = "annular-haven-365520"
-  node_count = 1
+  node_count = 3
 
   management {
     auto_repair  = true
