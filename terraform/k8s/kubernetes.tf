@@ -32,8 +32,8 @@ resource "google_container_cluster" "gke" {
   }
 master_authorized_networks_config {
   cidr_blocks {
-   # cidr_block = "${var.authirize_ip}/32"cidr_block = 
-   cidr_block = "0.0.0.0/0"
+   cidr_block = "${var.authirize_ip}"
+  
   }
 }
 
