@@ -15,6 +15,6 @@ module "K8s" {
     source = "./k8s"
     network = module.network.vpc.self_link
     subnetwork = module.network.restricted_subnet.self_link
-    authirize_ip = "192.168.1.0/24"
+    authirize_ip = module.bastion.machine_ip
   
 } 
