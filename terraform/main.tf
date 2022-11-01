@@ -4,7 +4,6 @@ module "network" {
 
 }
 module "bastion" {
-  count =0
   source        = "./bastion"
   vpc_id           = module.network.vpc.id
   manage_subnet = module.network.manage_subnet.id
@@ -16,6 +15,6 @@ module "K8s" {
     source = "./k8s"
     network = module.network.vpc.self_link
     subnetwork = module.network.restricted_subnet.self_link
-    authirize_ip = "0.0.0.0/0"
+    authirize_ip = "192.168.1.0/24"
   
 } 

@@ -1,9 +1,0 @@
-apiVersion: v1
-description: Setup of jenkins manifests
-keywords:
-- jenkins
-maintainers:
-- email: ali.alshemy125@gamil.com
-  name: ali mohamed
-name: jenkins
-version: 1.0.0
