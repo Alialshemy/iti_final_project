@@ -1,8 +1,8 @@
 # Final Project
   Build infrastructure to deploy jenkins server and deploy Django application
 # Requirements
-Terraform installed
-helm installed
+  - Terraform installed
+  - helm installed
 # Architecture overview of infrastructure
 ![Architecture](https://github.com/Alialshemy/iti_final_project/blob/main/images/infastracture.png)
 
@@ -36,6 +36,8 @@ helm installed
 ``` 
   helm install jenkins ./jenkins -n jenkins
 ```
+- configure dynamic agent in jenkins with kubernate plugin 
+- create pipline to Deploy app [Deploy_app](https://github.com/Alialshemy/Django_app.git)
  
 
 
