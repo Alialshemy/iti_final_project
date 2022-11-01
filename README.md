@@ -8,7 +8,7 @@
 
 # terrafrom code  Consists of three modules
   - network module:  create network infrastructure two subnets private (manage,restricted) and two nat 
-  - bastions module:  create bastions instance in manage subnet to manage cluster 
+  - bastions module:  create bastions instance in manage subnet to manage cluster and bash script to dowbload all Requirements in bastion instance 
   - K8s module : to create private cluster in restricted subnet
 # How to run terrafrom code
    ```
