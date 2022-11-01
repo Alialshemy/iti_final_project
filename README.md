@@ -37,6 +37,7 @@
   helm install jenkins ./jenkins -n jenkins
 ```
 - configure dynamic agent in jenkins with kubernate plugin 
+- configure service account in jenkins used to  deploy in cluster
 - create pipline to Deploy app [Deploy_app](https://github.com/Alialshemy/Django_app.git)
  
 
